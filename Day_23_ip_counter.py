@@ -15,6 +15,14 @@ with open("log.txt","r") as f:
 print(f"Total failed:{failed_count}")
 for ip,count in ip_count.items():
     print(f"{ip} : {count} times")
+
+#-------Day 24 ka naya code yaha sy shuru-------
+if ip_count:
+    top_ip = max(ip_count,key=ip_count.get)
+    top_count = ip_count[top_ip]
+    print(f"[!] Top Attacker Found: {top_ip} -> {top_count} attacks")
+else:
+    print("Koi attack nhi mila")
     
 
             
